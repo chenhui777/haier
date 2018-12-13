@@ -1,0 +1,129 @@
+.show-login-head{
+    width: 100%;
+    background:#ffffff;
+}
+.inner{
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    width: 1000px;
+    zoom: 1;
+}
+.inner h1 {
+    float: left;
+    width: 350px;
+    height: 49px;
+    vertical-align: middle;
+    padding: 0 0 0 10px;
+}
+.inner h1 a{
+    float: left;
+    vertical-align: middle;
+}
+.inner h1 span{
+    float: left;
+    margin: -6px 0 0 5px;
+    padding-left: 5px;
+    display: inline-block;
+    width: 170px;
+    height: 68px;
+    vertical-align: middle;
+}
+.inner h1 span img{
+    width: 170px;
+    height: 60px;
+}
+.inner h2{
+    font-size: 18px;
+    color: #606060;
+    font-weight: 500;
+    line-height: 36px;
+}
+.inner p{
+    text-align: right;
+}
+.show-login-head .inner .inner-a a{
+    color: #005aaa;
+    font-size: 14px;
+    padding-left: 10px;
+    /*margin: right;*/
+}
+.show-login-head .inner .inner-a a:hover{
+    text-decoration: underline;
+}
+
+.process{
+    width: 100%;
+    background: #f2f2f2;
+}
+.process-center{
+    width: 1190px;
+    /*height: 96px;*/
+    margin: 0 auto;
+}
+.process-center p{
+    line-height: 96px;
+    text-align: center;
+}
+.process-center p .sp01{
+    font-size: 24px;
+    margin-right: 60px;
+}
+.process-center p .sp02{
+    /*margin-left: 100px;*/
+    background: #2979ff;
+    color: #FFFFFF;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: normal;
+    font-size: 14px;
+}
+.process-center p .sp03{
+    display:inline-block;
+    height: 10px;
+    width: 1px;
+    color:#dfdfdf;
+    z-index: 100;
+}
+.process-center p .sp04{
+    background: #fff;
+    color: #666;
+}
+.process-center p .sp04:hover{
+    color: #2979ff;
+    text-decoration: underline;
+}
+.res{
+    width: 100%;
+}
+.redis {
+    width: 1190px;
+    margin:0 auto;
+    height: 500px;
+    background:url(../img/landing.png) no-repeat;
+    position: relative;
+}
+.redis .forms p{
+    text-align:left;
+    margin: 15px 0;
+}
+
+.redis p input{
+    display: inline-block;
+    width: 200px;
+    height: 25px;
+    outline: none;
+}
+.forms{
+    width: 480px;
+    height: 220px;
+    background: #fff;
+    position: absolute;
+    top:150px;
+    left:416px;
+}
+

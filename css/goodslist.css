@@ -1,0 +1,624 @@
+.nav-main{
+	display: none;
+}
+.nav-l:hover .nav-main{
+	display: block;	
+}
+
+body{
+	background: #5d7af5;
+
+}
+/* tit */
+.tit{
+	width: 100%;
+	padding-bottom: 20px;
+}
+.tit .cen{
+	/* width: 1190px; */
+	height: 88px;
+	text-align: center;
+	margin: 64px 0 50px;
+
+}
+.tit .cen h1{
+	font-size: 52px;
+    color: #ffffff;
+    text-align: center;
+    height: 88px;
+	line-height: 88px;
+    background: url(../img/life.png) no-repeat center;
+}
+.content-box{
+	width: 1190px;
+	margin: 0 auto;
+}
+.content-box::after{
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+/*。。。。。。 以下是动态获取li的父盒子。。。。。。。。。 */
+/* 第一块  居家生活*/
+.content-box .ulss{
+	width: 1190px;
+	height: 70px;
+}
+.ulss .liss{
+	cursor: pointer;
+	float: left;
+    height: 70px;
+    line-height: 70px;
+    width: 170px;
+    /* padding: 0 50px; */
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background: #4439C5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ulss .liss:first-child{
+	background: white;
+	color: #4439C5;
+}
+.create{
+	width: 1190px;
+	margin: 0 auto;
+	height: 320px;
+	position: relative;
+}
+.create::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.create .createUl{
+	background: white;
+	height:320px;
+}
+.create .createUl::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.create ul{
+	position: absolute;
+	top:0;
+	width: 1190px;
+	background: white;
+}
+/* 第一块  居家生活 */
+/* 以下是动态获取的li */
+.create ul li {
+	float: left;
+	width: 192px;
+	height: 310px;
+	background: #fff;
+	margin-right: 7px;
+}
+.create ul li:last-child{
+	margin-right: 0px;
+}
+.create ul li .create-a1{
+text-align: center;
+	margin-bottom: 5px;
+
+}
+.create ul li .create-a1 img{
+	width: 192px;
+	height: 192px;
+}
+.create ul li .create-a2{
+	display: block;
+	width: 184px;
+	padding:0 4px;
+	text-align: left;
+	font-size: 14px;
+	color: #666;
+}
+.create ul li .create-a2:hover{
+	color: #2979ff;
+}
+.create ul li span{
+	padding:0 4px;
+	font-size: 14px;
+	color: #ff6026;
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.create ul li .create-a3{
+	display: block;
+	padding:0 4px;
+	text-align: center;
+	background:#ff4400 ;
+	width: 176px;
+	height: 30px;
+	line-height: 30px;
+	color:white;
+	margin: 0 auto;
+}
+
+/*。。。。。。 以下是动态获取li的父盒子。。。。。。。。。 */
+/* 第二块  食饮生鲜*/
+
+.content-box .ulssa{
+	width: 1190px;
+	height: 70px;
+}
+.ulssa .lissa{
+	cursor: pointer;
+	float: left;
+    height: 70px;
+    line-height: 70px;
+    width: 170px;
+    /* padding: 0 50px; */
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background: #4439C5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ulssa .lissa:first-child{
+	background: white;
+	color: #4439C5;
+}
+.createa{
+	width: 1190px;
+	margin: 0 auto;
+	height: 320px;
+	position: relative;
+}
+.createa::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.createa .create-aa{
+	background: white;
+	height:320px;
+}
+.createa .createUl-aa::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.createa ul{
+	position: absolute;
+	top:0;
+	width: 1190px;
+	background: white;
+}
+/* 第二块  食饮生鲜 */
+/* 以下是动态获取的li */
+.createa ul li {
+	float: left;
+	width: 192px;
+	height: 310px;
+	background: #fff;
+	margin-right: 7px;
+}
+.createa ul li:last-child{
+	margin-right: 0px;
+}
+.createa ul li .create-a1{
+text-align: center;
+	margin-bottom: 5px;
+
+}
+.createa ul li .create-a1 img{
+	width: 192px;
+	height: 192px;
+}
+.createa ul li .create-a2{
+	display: block;
+	width: 184px;
+	padding:0 4px;
+	text-align: left;
+	font-size: 14px;
+	color: #666;
+}
+.createa ul li .create-a2:hover{
+	color: #2979ff;
+}
+.createa ul li span{
+	padding:0 4px;
+	font-size: 14px;
+	color: #ff6026;
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.createa ul li .create-a3{
+	display: block;
+	padding:0 4px;
+	text-align: center;
+	background:#ff4400 ;
+	width: 176px;
+	height: 30px;
+	line-height: 30px;
+	color:white;
+	margin: 0 auto;
+}
+
+/*。。。。。。 以下是动态获取li的父盒子。。。。。。。。。 */
+/* 第三块  母婴个护*/
+.content-box .ulssb{
+	width: 1190px;
+	height: 70px;
+}
+.ulssb .lissb{
+	cursor: pointer;
+	float: left;
+    height: 70px;
+    line-height: 70px;
+    width: 170px;
+    /* padding: 0 50px; */
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background: #4439C5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ulssb .lissb:first-child{
+	background: white;
+	color: #4439C5;
+}
+.createb{
+	width: 1190px;
+	margin: 0 auto;
+	height: 320px;
+	position: relative;
+}
+.createb::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.createb .create-bb{
+	background: white;
+	height:320px;
+}
+.createb .createUl-bb::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.createb ul{
+	position: absolute;
+	top:0;
+	width: 1190px;
+	background: white;
+}
+
+/* 第三块  母婴个护 */
+/* 以下是动态获取的li */
+.createb ul li {
+	float: left;
+	width: 192px;
+	height: 310px;
+	background: #fff;
+	margin-right: 7px;
+}
+.createb ul li:last-child{
+	margin-right: 0px;
+}
+.createb ul li .create-a1{
+text-align: center;
+	margin-bottom: 5px;
+
+}
+.createb ul li .create-a1 img{
+	width: 192px;
+	height: 192px;
+}
+.createb ul li .create-a2{
+	display: block;
+	width: 184px;
+	padding:0 4px;
+	text-align: left;
+	font-size: 14px;
+	color: #666;
+}
+.createb ul li .create-a2:hover{
+	color: #2979ff;
+}
+.createb ul li span{
+	padding:0 4px;
+	font-size: 14px;
+	color: #ff6026;
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.createb ul li .create-a3{
+	display: block;
+	padding:0 4px;
+	text-align: center;
+	background:#ff4400 ;
+	width: 176px;
+	height: 30px;
+	line-height: 30px;
+	color:white;
+	margin: 0 auto;
+}
+
+
+/*。。。。。。 以下是动态获取li的父盒子。。。。。。。。。 */
+/* 第4块  生活小电*/
+.content-box .ulssc{
+	width: 1190px;
+	height: 70px;
+}
+.ulssc .lissc{
+	cursor: pointer;
+	float: left;
+    height: 70px;
+    line-height: 70px;
+    width: 170px;
+    /* padding: 0 50px; */
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background: #4439C5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ulssc .lissc:first-child{
+	background: white;
+	color: #4439C5;
+}
+.createc{
+	width: 1190px;
+	margin: 0 auto;
+	height: 320px;
+	position: relative;
+}
+.createc::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.createc .create-cc{
+	background: white;
+	height:320px;
+}
+.createc .createUl-cc::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.createc ul{
+	position: absolute;
+	top:0;
+	width: 1190px;
+	background: white;
+}
+
+/* 第4块  生活小电 */
+/* 以下是动态获取的li */
+.createc ul li {
+	float: left;
+	width: 192px;
+	height: 310px;
+	background: #fff;
+	margin-right: 7px;
+}
+.createc ul li:last-child{
+	margin-right: 0px;
+}
+.createc ul li .create-a1{
+text-align: center;
+	margin-bottom: 5px;
+
+}
+.createc ul li .create-a1 img{
+	width: 192px;
+	height: 192px;
+}
+.createc ul li .create-a2{
+	display: block;
+	width: 184px;
+	padding:0 4px;
+	text-align: left;
+	font-size: 14px;
+	color: #666;
+}
+.createc ul li .create-a2:hover{
+	color: #2979ff;
+}
+.createc ul li span{
+	padding:0 4px;
+	font-size: 14px;
+	color: #ff6026;
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.createc ul li .create-a3{
+	display: block;
+	padding:0 4px;
+	text-align: center;
+	background:#ff4400 ;
+	width: 176px;
+	height: 30px;
+	line-height: 30px;
+	color:white;
+	margin: 0 auto;
+}
+
+/*。。。。。。 以下是动态获取li的父盒子。。。。。。。。。 */
+/* 第5块  数码3C*/
+.content-box .ulssd{
+	width: 1190px;
+	height: 70px;
+}
+.ulssd .lissd{
+	cursor: pointer;
+	float: left;
+    height: 70px;
+    line-height: 70px;
+    width: 170px;
+    /* padding: 0 50px; */
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    background: #4439C5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ulssd .lissd:first-child{
+	background: white;
+	color: #4439C5;
+}
+.created{
+	width: 1190px;
+	margin: 0 auto;
+	height: 320px;
+	position: relative;
+}
+.created::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.created .create-dd{
+	background: white;
+	height:320px;
+}
+.created .createUl-dd::after{
+	content: "";
+	height:0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+.created ul{
+	position: absolute;
+	top:0;
+	width: 1190px;
+	background: white;
+}
+/* 第5块  数码3C */
+/* 以下是动态获取的li */
+.created ul li {
+	float: left;
+	width: 192px;
+	height: 310px;
+	background: #fff;
+	margin-right: 7px;
+}
+.created ul li:last-child{
+	margin-right: 0px;
+}
+.created ul li .create-a1{
+text-align: center;
+	margin-bottom: 5px;
+
+}
+.created ul li .create-a1 img{
+	width: 192px;
+	height: 192px;
+}
+.created ul li .create-a2{
+	display: block;
+	width: 184px;
+	padding:0 4px;
+	text-align: left;
+	font-size: 14px;
+	color: #666;
+}
+.created ul li .create-a2:hover{
+	color: #2979ff;
+}
+.created ul li span{
+	padding:0 4px;
+	font-size: 14px;
+	color: #ff6026;
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+.created ul li .create-a3{
+	display: block;
+	padding:0 4px;
+	text-align: center;
+	background:#ff4400 ;
+	width: 176px;
+	height: 30px;
+	line-height: 30px;
+	color:white;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+/* 底部 */
+.footer{
+	background: #5d7af5;
+}
+.ce{
+	position: fixed;
+	right: 30px;
+	top: 10px;
+	z-index: 1000;
+display: none;
+}
+.ce ul{
+	width: 106px;
+	height: 150px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #1400ff;
+}
+.ce ul li{
+	cursor: pointer;
+	background: #5574F1;
+	margin: 0 5px;
+    margin-bottom: 8px;
+    width: 96px;
+    text-align: center;
+	color: white;
+	font-size: 12px;
+}
+
+.ce-t{
+	width: 80px;
+	height: 58px;
+	margin: 0 auto;
+	background: url(../img/BitmapCopy9.png) no-repeat;
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/shoppingCars.css"/>
+</head>
+<body>
+<div class="head-bar">
+	<div class="head-b"style="width: 1000px">
+	<div class="map">
+		<i class="mm"></i>
+		<i class="nn">青岛</i>
+	</div>	
+	<ul>
+		<li class="head-one">
+			嗨，欢迎来到顺逛官方商城 请
+			<a href="#" class="deng">登陆</a>
+			&nbsp;|&nbsp;
+			<a href="#">免费注册</a>
+		</li>
+		<li><a href="#">我的顺逛</a></li>
+		<li class="link-ver"></li>
+		<li style="position: relative;" class="pigs"><a href="#">顺逛微店</a>
+			<img class="pigss" src="../img/ehaierapp.png" alt="">
+		</li>
+		<li class="link-ver"></li>
+		<li><a href="#">互动社区</a></li>
+		<li class="link-ver"></li>
+		<li><a href="#">知识堂</a></li>
+		<li class="link-ver"></li>
+		<li><a href="#">帮助中心</a></li>
+		<li class="link-ver"></li>
+		<li><a href="#">企业购</a></li>
+		<li class="link-ver"></li>
+		<li><a href="#">海尔官网</a></li>
+		<li class="link-ver"></li>
+		<li><a href="#">好品海智</a></li>
+		<li class="link-ver"></li>
+		<li><a href="#">商户平台</a></li>
+		<li class="link-ver"></li>
+		<li><a href="#">顺逛社区</a></li>
+
+	</ul>
+</div>	
+</div>
+
+<div class="ban">
+	<div class="banner">
+		<a href="#"><i></i></a>
+		<div class="shop">购物车</div>
+		<div class="shopping-liu">
+			<div class="shop-1">我的购物车</div>
+			<span class="R-img"></span>
+			<div class="shop-2">填写核对订单详情</div>
+			<span class="L-img"></span>
+			<div class="shop-3">成功提交订单</div>
+
+		</div>
+	</div>
+</div>
+<div class="bans-b">
+	<p>配送至：<select name="" id="">
+		<option>hahaha</option>
+	</select></p>
+	<div class="cars">
+		<div class="car-t">
+			<ul>
+				<li class="li-1"><input type="checkbox" id="chkAll">全选</li>
+				<li class="li-1"><input type="button" id="unchk" value="反选"></li>
+				<li class="li-2">商品</li>
+				<li class="li-3">货到付款</li>
+				<li class="li-4">单价(元)</li>
+				<li class="li-5">数量</li>
+				<li class="li-6">已优惠</li>
+				<li class="li-7">小计(元)</li>
+				<li class="li-8">操作</li>
+			</ul>
+		</div>
+		<div class="car-c">
+		<!-- 	<ul>
+				<li>
+					<div class="check">
+						<input type="checkbox">
+					</div>
+					<div class="tu">
+						<img src="../img/tu1.jpg" alt="">
+						<a href="#">Haier/海尔波轮洗衣机EB80M39TH 8kg/公斤全自动智能波轮洗衣机</a>
+					</div>
+					<div class="zhi">
+						支持
+					</div>
+					<div class="dan">
+						<span>￥</span>1099
+					</div>
+					<div class="shu">
+						<div class="shu-num">
+							<span class="spann1">-</span>
+							<input  type="text" value="1">
+							<span class="spann2">+</span>
+						</div>
+						<div class="only">
+							有货
+						</div>
+					</div>
+					<div class="you">
+						<span>￥</span>0
+					</div>
+					<div class="ji">
+						<span>￥</span>1099
+					</div>
+					<div class="do">
+						<a href="#">移入收藏夹</a>
+						<a href="#" class="detele">删除</a>
+					</div>
+				</li>
+			</ul> -->
+		</div>
+		<div class="car-b">
+			<div class="car-b-r">
+				商品总计： <a class="zong1" href="#"><span>￥</span> 1099 </a> - 优惠活动：<a href="#"><span>￥</span>0</a> = 订单总计 (不含运费) ： <span>￥</span> <a class="zong2" href="#">1099</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../js/jquery.1.10.min.js"></script>
+<script type="text/javascript" src="../js/checkall.js"></script>
+<script type="text.javascript" src="../js/cookie.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	//以下注释掉的是根据商品详情的加入购物车的a标签的href属性(eg：<a href='shoppingCars.html?data[i].goodsId'></a>) 获取该商品的整一行数据 ,下面用啥点啥就行(let goodsImg = val.data.goodsImg);
+// 	$(document).ready(function() {
+// 		//获取id的函数
+// 		function getUrlParam(name) {
+// 			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+// 	
+// 			var r = window.location.search.substr(1).match(reg); //匹配目标参数
+// 			if(r!=null){
+// 				return unescape(r[2]);//返回参数值
+// 			}
+// 			return null; 
+// 		}
+// 		
+// 	var id = getUrlParam('booksId');
+// 		console.log("id:"+id);
+// 	
+// 	
+// 	
+// 	
+// 	$.ajax({
+// 		type:"get",
+// 		url:"../php/getGoodsList2.php",
+// 		success:function(data){
+// 			createUI(data);
+// 		}
+// 	});
+// 	
+// 	function createUI(data){
+// 		let goodsJson = jQuery.parseJSON(data);
+// 		console.log(goodsJson);
+// 	
+// 	$.each(goodsJson,function(indx,val){
+// 		
+// 		if(id == val.goodsId){
+// 			console.log(val.beiyong2);//您现在的位置：首页> 居家生活> 储物家具> 挂衣架> 轩涵
+// 			console.log(val.beiyong3);//轩涵 挂衣架 轩涵 晾衣架 宽肩小铁钩挂衣架
+// 			console.log(val.beiyong4);//【12.12年终盛典】活动时间12月11日10点-16日24
+// 			console.log(val.beiyong5);//无痕不起肩 加宽成人衣挂
+// 			console.log(val.beiyong6);//8件
+// 			console.log(val.beiyong7);//0
+// 			console.log(val.beiyong9);//98
+// 			console.log("-------------------------------------")	
+//  		}
+// 	})
+// }	
+// });	
+
+
+// $(function(){
+// 	$.ajax({
+// 		type:"get",
+// 		url:"../php/getshoppcart.php",
+// 		async:true,
+// 		data:{},
+// 		success:function(data){
+// 			console.log(data);
+// 			for(let i = 0;i<data.length;i++){
+// 			let innter = "<ul><li><div class='check'><input type='checkbox'></div><div class='tu'><img id='newImg' style='width:80px' src='"+data[i].goodsImg+"'/><a class='newClass' href='#'>"+ data[i].vipName +"</a></div><div class='zhi'>支持</div><div class='dan'><span>￥</span>"+ data[i].goodsPrice +"</div><div class='shu'><div class='shu-num'><span class='spann1'>-</span><input class='inputVal' type='text' value='"+ data[i].goodsCount +"'><span class='spann2'>+</span></div><div class='only'>有货</div></div><div class='you'><span>￥</span>0</div><div class='ji'><span>￥</span>0</div><div class='do'><a href='#'>移入收藏夹</a><a href='#' class='detele'>删除</a></div></li></ul>";
+// 			
+// 			$(".car-c").append(innter);
+// 		}
+// 			
+// 			$(".detele").click(function(){
+// 				let goodsImg = $(this).parent().parent().find("#newImg").attr("src");
+// 				let vipName = $(this).parent().parent().find(".newClass").text();
+// 				let deteleObj = {goodsImg:goodsImg,vipName:vipName};
+// 				console.log(deteleObj)
+// 				$.ajax({
+// 					type:"get",
+// 					url:"../php/deleteGoods.php",
+// 					async:true,
+// 					data:deteleObj,
+// 					success:function(data){
+// 						console.log(data);
+// 						if(data==11111){
+// 							location.reload();
+// 						}
+// 					}
+// 				})
+// 				
+// 			})
+// 		},
+// 		dataType:"json"
+// 		
+// 	})
+// 	
+// })
+// 	
+
+
+$(function(){
+	$.ajax({
+		type:"get",
+		url:"../php/getshoppcart.php",
+		async:true,
+		data:{},
+
+		dataType:"json"
+	}).done(
+		function(data){
+			console.log(data);
+			for(let i = 0;i<data.length;i++){
+			let innter = "<ul><li><div class='check'><input type='checkbox'></div><div class='tu'><img id='newImg' style='width:80px' src='"+data[i].goodsImg+"'/><a class='newClass' href='#'>"+ data[i].vipName +"</a></div><div class='zhi'>支持</div><div class='dan'><span>￥</span>"+ data[i].goodsPrice +"</div><div class='shu'><div class='shu-num'><span class='spann1'>-</span><input class='inputVal' type='text' value='"+ data[i].goodsCount +"'><span class='spann2'>+</span></div><div class='only'>有货</div></div><div class='you'><span>￥</span>0</div><div class='ji'><span>￥</span>0</div><div class='do'><a href='#'>移入收藏夹</a><a href='#' class='detele'>删除</a></div></li></ul>";
+			
+			$(".car-c").append(innter);
+			
+
+		}
+		$(function(){
+					//点击加号
+						$(".spann2").click(function(){
+								let countnum = $(this).parent().parent().parent().find(".inputVal").val();
+								countnum++;
+								if(countnum>10){
+									alert("该商品最多购买10件");
+									return;
+								}
+								setTotal()
+				
+								$(this).parent().parent().parent().find(".inputVal").val(countnum);
+						// 		var t = $(this).parent().find('input[class*=inputVal]');
+						// 		t.val(parseInt(t.val())+1);
+						// 		setTotal();
+							})
+						//点击减号
+						$(".spann1").click(function(){
+								let countnum = $(this).parent().parent().parent().find(".inputVal").val();
+								countnum--;
+								if(countnum<=0){
+									alert("该商品最少为1件");
+									return countnum;
+								
+								}
+								setTotal()
+						
+								$(this).parent().parent().parent().find(".inputVal").val(countnum);
+						// 		var t = $(this).parent().find('input[class*=inputVal]');
+						// 		t.val(parseInt(t.val())+1);
+						// 		setTotal();
+							})
+								function setTotal(){
+									var sum = 0;
+									$(".car-c ul li .shu-num").each(function(){
+									
+									var num = parseInt($(this).find("input[class*=inputVal]").val());
+									var price = parseFloat($(this).find("span[class*=price]").text());
+									sum += num*price;
+									})
+									$("#car-b-r a .zong").html(sum.toFixed(2));
+								}
+								setTotal();
+							
+		})
+	
+					
+//全选反选插件
+			$("#chkAll").bindCheckAll($(":checkbox").not("#chkAll"),$("#unchk"));
+			
+			
+			$(".detele").click(function(){
+				let goodsImg = $(this).parent().parent().find("#newImg").attr("src");
+				let vipName = $(this).parent().parent().find(".newClass").text();
+				let deteleObj = {goodsImg:goodsImg,vipName:vipName};
+				console.log(deteleObj)
+				$.ajax({
+					type:"get",
+					url:"../php/deleteGoods.php",
+					async:true,
+					data:deteleObj
+				}).done(function(data){
+						console.log(data);
+						if(data==11111){
+							location.reload();
+						}
+					})
+				
+			})
+		},
+	)
+	
+})
+
+// $(".spann1").click(function(){
+// 	let jian = $(this).parent().find("input").val();
+// 	jian--;
+// 	
+// })
+
+
+// $(function(){
+// 	
+// 	$(".spann1").click(function(){
+// 		var t = $(this).parent().find("input[class*=inputVal]");
+// 		t.val(parseInt(t.val())-1);
+// 		if(parseInt(t.val())<0){
+// 			t.val(0);
+// 		}
+// 		setTotal()
+// 	})
+// 	
+// 	function setTotal(){
+// 		var sum = 0;
+// 		$(".car-c ul li .shu-num").each(function(){
+// 		
+// 		var num = parseInt($(this).find("input[class*=inputVal]").val());
+// 		var price = parseFloat($(this).find("span[class*=price]").text());
+// 		sum += num*price;
+// 		})
+// 		$("#car-b-r a .zong").html(sum.toFixed(2));
+// 	}
+// 	setTotal();
+// 
+// }) 
+
+
+	
+	// $(function(){
+		// 全选按钮的jQuery对象.函数名(所有被控制的复选框jQuery对象，反选的按钮对象)
+	// });
+</script>

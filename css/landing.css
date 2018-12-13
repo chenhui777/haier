@@ -1,0 +1,170 @@
+.show-login-head{
+    width: 100%;
+    background:#ffffff;
+}
+.inner{
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    width: 1000px;
+    zoom: 1;
+}
+.inner h1 {
+    float: left;
+    width: 350px;
+    height: 49px;
+    vertical-align: middle;
+    padding: 0 0 0 10px;
+}
+.inner h1 a{
+    float: left;
+    vertical-align: middle;
+}
+.inner h1 span{
+    float: left;
+    margin: -6px 0 0 5px;
+    padding-left: 5px;
+    display: inline-block;
+    width: 170px;
+    height: 68px;
+    vertical-align: middle;
+}
+.inner h1 span img{
+    width: 170px;
+    height: 60px;
+}
+.inner h2{
+    font-size: 18px;
+    color: #606060;
+    font-weight: 500;
+    line-height: 36px;
+}
+.inner p{
+    text-align: right;
+}
+.show-login-head .inner .inner-a a{
+    color: #005aaa;
+    font-size: 14px;
+    padding-left: 10px;
+    /*margin: right;*/
+}
+
+
+.land{
+	position: relative;
+	width: 100%;
+	height: 350px;
+	background: url(../img/land.png) no-repeat;
+	background-size: cover;
+	/* background-size: 70%; */
+}
+.forms{
+	position:absolute;
+	right: 160px;
+	top: 5px;
+	width:490px;
+	height: 300px;
+	background: white;
+}
+.forms .p1{
+	line-height: 48px;
+	border-bottom: 1px solid #dddddd;
+}
+.forms .p1::after{
+	content: "";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.forms .p1 span{
+	font: 20px;
+	color: #666;
+	font-weight: 600;
+	float: left;
+	padding-left: 10px;
+}
+.forms .p1 a{
+	font-size: 12px;
+	color: #005aaa;
+	float: right;
+	padding-right: 10px;
+
+}
+.forms .p1 a:hover{
+	text-decoration: underline;
+}
+.forms .p2{
+	line-height: 45px;
+	text-align: center;
+}
+.forms .p2 a{
+	display: inline-block;
+	width: 130px;
+	height: 45px;
+	font-size: 12px;
+	color: #666;
+	border-bottom: 2px solid #ddd;
+}
+.forms .p2 a:first-child{
+	color: #32beff;
+	border-bottom-color: #32beff;
+}
+.forms .p2 a:first-child:hover{
+	color: #666;
+}
+.forms .p3, .p4{
+	text-align: center;
+	/* margin: 5px 0; */
+}
+.forms .p3 input{
+	width:260px ;
+	height: 34px;
+	outline: none;
+	padding-left: 10px;
+}
+.forms .p4 input{
+	width:260px ;
+	height: 34px;
+	outline: none;
+	padding-left: 10px;
+}
+.forms .p5{
+	display: ;
+	line-height: 20px;
+}
+.forms .p5::after{
+	content: "";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.forms .p5 a{
+	float: right;
+}
+.forms .p6{
+	text-align: center;
+	/* box-shadow: 4px; */
+}
+.forms .p6 #btn{
+	width: 260px;
+	height: 40px;
+	line-height: 40px;
+	color: white;
+	font-size: 14px;
+	background: #32beff;
+	text-align: center;
+	border: 0;
+	display: inline-block;
+	border-radius:4px ;
+}
+.forms .p3{
+	margin-top: 5px;
+}
+.forms .p7, .p8, .p9{
+	display: block;
+	height: 20px;
+	text-align: center;
+}

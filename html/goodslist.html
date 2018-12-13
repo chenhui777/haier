@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/goodslist.css"/>
+ <style type="text/css">
+        /* css 重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body {
+            /* background: #fff; */
+            font: normal 12px/22px 宋体;
+        }
+        img {
+            border: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        /* 本例子css */
+        .slideBox {
+            width: 100%;
+            height: 430px;
+            overflow: hidden;
+            position: relative;
+            /* border: 1px solid #ddd; */
+        }
+        .slideBox .hd {
+            height: 15px;
+            overflow: hidden;
+            position: absolute;
+            right: 5px;
+            bottom: 5px;
+            z-index: 1;
+        }
+        .slideBox .hd ul {
+            overflow: hidden;
+            zoom: 1;
+            float: left;
+        }
+        .slideBox .hd ul li {
+            float: left;
+            margin-right: 2px;
+            width: 15px;
+            height: 15px;
+            line-height: 14px;
+            text-align: center;
+            background: #fff;
+            cursor: pointer;
+        }
+        .slideBox .hd ul li.on {
+            background: #f00;
+            color: #fff;
+        }
+        .slideBox .bd {
+            position: relative;
+            height: 100%;
+            z-index: 0;
+        }
+        .slideBox .bd li {
+            zoom: 1;
+            vertical-align: middle;
+        }
+        .slideBox .bd img {
+            width: 100%;
+            height: 430px;
+            display: block;
+        }
+        /* 下面是前/后按钮代码，如果不需要删除即可 */
+        .slideBox .prev,
+        .slideBox .next {
+            position: absolute;
+            left: 3%;
+            top: 50%;
+            margin-top: -25px;
+            display: block;
+            width: 32px;
+            height: 40px;
+            background: url(../img/bgr.png) -120px 160px no-repeat;
+            filter: alpha(opacity=100);
+            opacity: 1;
+        }
+        .slideBox .next {
+            left: auto;
+            right: 3%;
+            background-position: -130px -160px;
+        }
+        .slideBox .prev:hover,
+        .slideBox .next:hover {
+            filter: alpha(opacity=100);
+            opacity: 1;
+        }
+        .slideBox .prevStop {
+            display: none;
+        }
+        .slideBox .nextStop {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+	<div class="head-bar">
+		<div class="head-b">
+			<div class="map">
+				<i class="mm"></i>
+				<i class="nn">青岛</i>
+			</div>	
+			<ul>
+				<li class="head-one">
+					嗨，欢迎来到顺逛官方商城 请
+					<a href="#" class="deng">登陆</a>
+					&nbsp;|&nbsp;
+					<a href="#">免费注册</a>
+				</li>
+				<li><a href="#">我的顺逛</a></li>
+				<li class="link-ver"></li>
+				<li style="position: relative;" class="pigs"><a href="#">顺逛微店</a>
+					<img class="pigss" src="../img/ehaierapp.png" alt="">
+				</li>
+				<li class="link-ver"></li>
+				<li><a href="#">互动社区</a></li>
+				<li class="link-ver"></li>
+				<li><a href="#">知识堂</a></li>
+				<li class="link-ver"></li>
+				<li><a href="#">帮助中心</a></li>
+				<li class="link-ver"></li>
+				<li><a href="#">企业购</a></li>
+				<li class="link-ver"></li>
+				<li><a href="#">海尔官网</a></li>
+				<li class="link-ver"></li>
+				<li><a href="#">好品海智</a></li>
+				<li class="link-ver"></li>
+				<li><a href="#">商户平台</a></li>
+				<li class="link-ver"></li>
+				<li><a href="#">顺逛社区</a></li>
+	
+			</ul>
+		</div>	
+	</div>
+	<div class="head-wrap">
+		<div class="head-w">
+	<!-- logo -->
+		<div class="h1-l">
+			<div class="r-img1">
+				<a href="#"><img src="../img/logo.png" alt=""></a>
+				<span><img src="../img/n-slogan.png" alt=""></span>
+			</div>
+				
+			</div>
+			
+		<div class="h1-c">
+				<input type="text" name="" id="redian" value="【今日值得买】" />
+					<button type="submit" class="btns"></button>
+				
+				<div class="uls">
+					<ul>
+						<li><a href="#" class="lis-l">【今日值得买】</a> <a href="#" class="lis-r">约38个商品</a></li>
+						<li><a href="#" class="lis-l">【今日值得买】</a> <a href="#" class="lis-r">约38个商品</a></li>
+						<li><a href="#" class="lis-l">【今日值得买】</a> <a href="#" class="lis-r">约38个商品</a></li>
+						<li><a href="#" class="lis-l">【今日值得买】</a> <a href="#" class="lis-r">约38个商品</a></li>
+						<li><a href="#" class="lis-l">【今日值得买】</a> <a href="#" class="lis-r">约38个商品</a></li>
+						<li><a href="#" class="lis-l">【今日值得买】</a> <a href="#" class="lis-r">约38个商品</a></li>
+					</ul>
+				</div>
+				
+				<div class="form-b">
+					<a href="#" class="xsms">限时秒杀</a>
+					<a href="#">今日值得买</a>
+					<a href="#">滚筒洗衣机</a>
+					<a href="#">冰箱</a>
+					<a href="#">80升热水器</a>
+				</div>
+			</div>
+			
+		<div class="h1-r">
+				<div class="shop">
+					<span class="car"></span>
+					<a href="#">我的购物车</a>
+					<span class="num">0</span>
+				</div>
+				<div class="shopping">
+					<div class="line"></div>
+					<i></i>
+					<span id="">
+						你还没有挑选产品哦，赶紧行动吧！
+					</span>
+				</div>
+			</div>
+	</div>
+	</div>
+	<!-- nav -->
+	<div class="nav-s">	
+		<div class="nav-ss">
+			<div class="nav-l">
+				<div class="ai">
+					<a href="#">商品分类 <i></i></a>
+				</div>
+				
+				<div class="nav-main">
+					<ul>
+						<li class="hav tao0">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						<li class="hav tao1">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						
+						<li class="hav tao2">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						
+						<li class="hav tao3">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						
+						<li class="hav tao4">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						
+						<li class="hav tao5">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						
+						<li class="hav tao6">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						<li class="hav tao7">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						
+						<li class="hav tao8">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						
+						<li class="hav tao9">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+						
+						<li class="hav tao10">
+							<a href="#">冰箱</a>
+							<i></i>
+							<div class="nono">
+								<div class="nono-l">
+									<ul>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+										<li><a href="#">
+											<img src="../img/dan1.png" alt="">
+											<span>单门</span>
+										</a></li>
+									</ul>
+								</div>
+								
+								<div class="nono-r">
+									<ul>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span>限时优惠</span>
+												<img src="../img/dan2.png" alt="">
+												<div class="bing">
+													<i class="name">BCD-470WDPG</br> 470升十字对开变频静音节能干湿分储电冰箱</i>
+													<i class="price">¥4,499</i>
+												</div>
+											</a>
+										</li>	
+									</ul>
+								</div>
+								
+							</div>
+						</li>
+					</ul>
+				
+				 </div>
+			</div>
+			<div class="nav-r">
+				<ul>
+					<li>
+						<a href="#">首页</a>
+					</li>
+					<li>
+						<a href="#">百货超市</a>
+						<i></i>
+						
+					</li>
+					<li>
+						<a href="#">抢先购</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="#">领券中心</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="#">会员</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="#">社区</a>
+					</li>
+					<li>
+						<a href="#">线下体验店</a>
+					</li>
+					<li>
+						<a href="#">3D云设计</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+			
+	</div>
+	<!-- 轮播图 -->
+	<div id="slideBox" class="slideBox">
+        <div class="hd">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="../img/goods1.jpg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="../img/goods2.jpg" />
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="../img/goods3.jpg" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+
+    </div>
+<div class="tit">
+	<!-- 居家生活 -->
+	<div class="cen">
+		<h1>居家生活</h1>
+	</div>
+	<div class="content-box">
+		<div class="ulss">
+			<div class="liss liss1">居家生活</div>
+			<div class="liss">纸品湿巾</div>
+			<div class="liss">水具酒具</div>
+			<div class="liss">烹饪锅具</div>
+			<div class="liss">清洁用具</div>
+			<div class="liss">家纺</div>
+			<div class="liss">厨具配件</div>
+		</div>
+		<div class="create">
+			<ul class="createUl create-qq"style="z-index:2;"></ul>	
+			<ul class="createUl-2 create-qq"></ul>
+			<ul class="createUl-3 create-qq"></ul>
+			<ul class="createUl-4 create-qq"></ul>
+			<ul class="createUl-5 create-qq"></ul>
+			<ul class="createUl-6 create-qq"></ul>
+			<ul class="createUl-7 create-qq"></ul>
+		</div>
+<!-- 食饮生鲜 -->
+	  	<div class="cen">
+			<h1>食饮生鲜</h1>
+		</div>
+		 <div class="ulssa">
+			<div class="lissa lissa1">新鲜果蔬</div>
+			<div class="lissa">中外名酒</div>
+			<div class="lissa">坚果炒货</div>
+			<div class="lissa">蜜饯果干</div>
+			<div class="lissa">饼干蛋糕</div>
+			<div class="lissa">粮油调味</div>
+			<div class="lissa">休闲零食</div>
+		</div>
+		<div class="createa">
+			<ul class="create-aa create-aa1" style="z-index:2;"></ul>
+			<ul class="create-aa create-aa2"></ul>
+			<ul class="create-aa create-aa3"></ul>
+			<ul class="create-aa create-aa4"></ul>
+			<ul class="create-aa create-aa5"></ul>
+			<ul class="create-aa create-aa6"></ul>
+			<ul class="create-aa create-aa7"></ul>
+		</div> 
+		<!-- 母婴个护 -->
+		 <div class="cen">
+			<h1>母婴个护</h1>
+		</div>
+		<div class="ulssb">
+			<div class="lissb">新鲜果蔬</div>
+			<div class="lissb">中外名酒</div>
+			<div class="lissb">坚果炒货</div>
+			<div class="lissb">蜜饯果干</div>
+			<div class="lissb">饼干蛋糕</div>
+			<div class="lissb">粮油调味</div>
+			<div class="lissb">休闲零食</div>
+		</div>
+
+		<div class="createb">
+			<ul class="create-bb create-bb1" style="z-index:2;"></ul>
+			<ul class="create-bb create-bb2"></ul>
+			<ul class="create-bb create-bb3"></ul>
+			<ul class="create-bb create-bb4"></ul>
+			<ul class="create-bb create-bb5"></ul>
+			<ul class="create-bb create-bb6"></ul>
+			<ul class="create-bb create-bb7"></ul>
+		
+		
+		</div>
+		<!-- 生活小电 -->
+		<div class="cen">
+			<h1>生活小电</h1>
+		</div>
+		<div class="ulssc">
+			<div class="lissc">新鲜果蔬</div>
+			<div class="lissc">中外名酒</div>
+			<div class="lissc">坚果炒货</div>
+			<div class="lissc">蜜饯果干</div>
+			<div class="lissc">饼干蛋糕</div>
+			<div class="lissc">粮油调味</div>
+			<div class="lissc">休闲零食</div>
+		</div>
+	
+		<div class="createc">
+			<ul class="create-cc create-cc1" style="z-index:2;"></ul>
+			<ul class="create-cc create-cc2"></ul>
+			<ul class="create-cc create-cc3"></ul>
+			<ul class="create-cc create-cc4"></ul>
+			<ul class="create-cc create-cc5"></ul>
+			<ul class="create-cc create-cc6"></ul>
+			<ul class="create-cc create-cc7"></ul>
+		</div> 
+		<!-- 数码3C --> 
+		 <div class="cen">
+			<h1>数码3C</h1>
+		</div>
+		<div class="ulssd">
+			<div class="lissd">新鲜果蔬</div>
+			<div class="lissd">中外名酒</div>
+			<div class="lissd">坚果炒货</div>
+			<div class="lissd">蜜饯果干</div>
+			<div class="lissd">饼干蛋糕</div>
+			<div class="lissd">粮油调味</div>
+			<div class="lissd">休闲零食</div>
+		</div>
+	
+		<div class="created">
+			<div class="created">
+				<ul class="create-dd create-dd1" style="z-index:2;"></ul>
+				<ul class="create-dd create-dd2"></ul>
+				<ul class="create-dd create-dd3"></ul>
+				<ul class="create-dd create-dd4"></ul>
+				<ul class="create-dd create-dd5"></ul>
+				<ul class="create-dd create-dd6"></ul>
+				<ul class="create-dd create-dd7"></ul>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	
+<!-- 底部 头头
+<!-- guide -->
+<div class="guide">
+	<div class="gui-t">
+		<a href="#">
+			<i></i>
+			<p><span>24小时限时达</span>
+			<span>全国1300个县支持24小时内送货上门</span>
+			</p>
+		</a>
+		<a href="#">
+			<i></i>
+			<p><span>24小时限时达</span>
+			<span>全国1300个县支持24小时内送货上门</span>
+			</p>
+		</a>
+		<a href="#">
+			<i></i>
+			<p><span>24小时限时达</span>
+			<span>全国1300个县支持24小时内送货上门</span>
+			</p>
+		</a>
+		<a href="#">
+			<i></i>
+			<p><span>24小时限时达</span>
+			<span>全国1300个县支持24小时内送货上门</span>
+			</p>
+		</a>
+	</div>
+	<div class="gui-b">
+		<div class="gui-b-l">
+			<span></span>
+			<dl>
+				<dt>购物指南</dt>
+				<dd><a href="#">登陆注册</a></dd>
+				<dd><a href="#">密码相关</a></dd>
+				<dd><a href="#">购物指南</a></dd>
+				<dd><a href="#">交易流程</a></dd>
+				<dd><a href="#">品牌大全</a></dd>
+			</dl>
+			<dl>
+				<dt>支付方式</dt>
+				<dd><a href="#">登陆注册</a></dd>
+				<dd><a href="#">密码相关</a></dd>
+				<dd><a href="#">购物指南</a></dd>
+				<dd><a href="#">交易流程</a></dd>
+				<dd><a href="#">品牌大全</a></dd>
+			</dl>
+			<dl>
+				<dt>物流配送</dt>
+				<dd><a href="#">登陆注册</a></dd>
+				<dd><a href="#">密码相关</a></dd>
+				<dd><a href="#">购物指南</a></dd>
+				<dd><a href="#">交易流程</a></dd>
+				<dd><a href="#">品牌大全</a></dd>
+			</dl>
+			<dl>
+				<dt>售后服务</dt>
+				<dd><a href="#">登陆注册</a></dd>
+				<dd><a href="#">密码相关</a></dd>
+				<dd><a href="#">购物指南</a></dd>
+				<dd><a href="#">交易流程</a></dd>
+				<dd><a href="#">品牌大全</a></dd>
+			</dl>
+			<dl>
+				<dt>特色服务</dt>
+				<dd><a href="#">登陆注册</a></dd>
+				<dd><a href="#">密码相关</a></dd>
+				<dd><a href="#">购物指南</a></dd>
+				<dd><a href="#">交易流程</a></dd>
+				<dd><a href="#">品牌大全</a></dd>
+			</dl>
+		</div>
+		<div class="gui-b-r">
+			<a href="#"><i></i>在线客服</a>
+		</div>
+	</div>
+</div>
+
+	<div class="footer">
+	<div class="foot">
+		<p class="foot-p1">
+			<a href="#">关于海尔</a>
+			<span></span>
+			<a href="#">售后服务</a>
+			<span></span>
+			<a href="#">投诉建议</a>
+			<span></span>
+			<a href="#">友情链接</a>
+			<span></span>
+			<a href="#">联系我们</a>
+		</p>
+		<p class="foot-p2">
+			<span>网站备案/许可证号：</span>
+			<a href="#"> 鲁ICP备09096283号</a>
+			<a href="#"><img src="../img/ghs.png" alt="">鲁公网安备37021202000654号</a>
+		</p>
+		<p class="foot-p3">
+			Copyright©2000-2018 海尔集团电子商务有限公司 All Rights Reserved
+		</p>
+		<p class="foot-p4">
+			<a href="#">
+				<img src="../img/j1.png" alt="">
+			</a>
+			<a href="#">
+				<img src="../img/j2.png" alt="">
+			</a>
+			<a href="#">
+				<img src="../img/j3.png" alt="">
+			</a>
+			<a href="#">
+				<img src="../img/j4.jpg" alt="">
+			</a>
+			<a href="#">
+				<img src="../img/j5.jpg" alt="">
+			</a>
+		</p>
+	</div>
+</div>
+
+	<!-- 侧边栏 -->
+	<div class="ce">
+		<div class="ce-t">
+			
+		</div>
+		<ul>
+			<li>居家生活</li>
+			<li>食品生鲜</li>
+			<li>母婴个护</li>
+			<li>生活小电</li>
+			<li>数码3C</li>
+		</ul>
+	</div>
+	<!-- 回到顶部 -->
+	<div class="back-top">
+	<a href="">
+		<i class="a1"></i>
+	</a>
+	<a href="#">
+
+		<i class="a2"></i>
+	</a>
+	
+</div>
+
+</body>
+</html>
+<script type="text/javascript" src="../js/jquery.1.10.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../js/goodslist.js"></script>
+<script type="text/javascript" src="../js/cookie.js"></script>
+<script type="text/javascript">
+	//轮播图
+	jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+	
+	//动态创建商品列表
+
+// 居家生活 1-6
+	$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 0;i<6;i++){
+				let str = "<li><a href='goodsDetails.html?booksId="+dataObj[i].goodsId+"' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					console.log("''''''''''''''''''''''''''''''''''");
+					console.log(dataObj[i].goodsId);
+					$(".createUl").append(str);
+				}
+			}
+		})
+	})
+// 居家生活 6-12
+	$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 6;i<12;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".createUl-2").append(str);
+				}
+			},
+		})
+	})
+// 居家生活 12-15
+	$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 12;i<15;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".createUl-3").append(str);
+				}
+			},
+		})
+	})
+// 居家生活 15-18
+	$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i =15;i<18;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".createUl-4").append(str);
+				}
+			},
+		})
+	})
+// 居家生活 18-21
+	$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 18;i<21;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".createUl-5").append(str);
+				}
+			},
+		})
+	})
+// 居家生活 21-24
+	$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 21;i<24;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".createUl-6").append(str);
+				}
+			},
+		})
+	})
+// 居家生活 24-27	
+	$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 24;i<27;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".createUl-7").append(str);
+				}
+			},
+		})
+	})
+// 食品生鲜 1-6
+	
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				console.log("------------------------")
+				console.log(data);
+				var dataObj = JSON.parse(data);
+				for(let i = 0;i<6;i++){
+				let kk = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".create-aa1").append(kk);
+				}
+			}
+		})
+	
+$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 6;i<12;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".create-aa2").append(str);
+				}
+			},
+		})
+	})
+
+$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 12;i<15;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".create-aa3").append(str);
+				}
+			},
+		})
+	})
+	
+$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 15;i<18;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".create-aa4").append(str);
+				}
+			},
+		})
+	})
+
+$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 18;i<21;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".create-aa5").append(str);
+				}
+			},
+		})
+	})
+	
+$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 21;i<24;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".create-aa6").append(str);
+				}
+			},
+		})
+	})
+	
+$(function(){
+		$.ajax({
+			type:"post",
+			url:"../php/getGoodsList2.php",
+			async:true,
+			data:{},
+			success:function(data){
+				var dataObj = JSON.parse(data);
+				for(let i = 24;i<27;i++){
+				let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+					$(".create-aa7").append(str);
+				}
+			},
+		})
+	})
+	
+	
+// /母婴个护 1-6
+
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			console.log("------------------------")
+			console.log(data);
+			var dataObj = JSON.parse(data);
+			for(let i = 0;i<6;i++){
+			let kk = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-bb1").append(kk);
+			}
+		}
+	})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 6;i<12;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-bb2").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 12;i<15;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-bb3").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 15;i<18;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-bb4").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 18;i<21;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-bb5").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 21;i<24;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-bb6").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 24;i<27;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-bb7").append(str);
+			}
+		},
+	})
+})
+
+
+// 生活小电 1-6
+
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			console.log("------------------------")
+			console.log(data);
+			var dataObj = JSON.parse(data);
+			for(let i = 0;i<6;i++){
+			let kk = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-cc1").append(kk);
+			}
+		}
+	})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 6;i<12;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-cc2").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 12;i<15;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-cc3").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 15;i<18;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-cc4").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 18;i<21;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-cc5").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 21;i<24;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-cc6").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 24;i<27;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-cc7").append(str);
+			}
+		},
+	})
+})
+
+// 数码3C 1-6
+
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			console.log("------------------------")
+			console.log(data);
+			var dataObj = JSON.parse(data);
+			for(let i = 0;i<6;i++){
+			let kk = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-dd1").append(kk);
+			}
+		}
+	})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 6;i<12;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-dd2").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 12;i<15;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-dd3").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 15;i<18;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-dd4").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 18;i<21;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-dd5").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 21;i<24;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-dd6").append(str);
+			}
+		},
+	})
+})
+
+$(function(){
+	$.ajax({
+		type:"post",
+		url:"../php/getGoodsList2.php",
+		async:true,
+		data:{},
+		success:function(data){
+			var dataObj = JSON.parse(data);
+			for(let i = 24;i<27;i++){
+			let str = "<li><a href='#' class='create-a1'>" +"<img src='"+ dataObj[i].goodsImg +"'/><a href='#' class='create-a2'>"+ dataObj[i].goodsDesc +"</a><span><b>￥</b>"+ dataObj[i].goodsPrice +"</span><a href='#' class='create-a3'>"+ dataObj[i].beiyong1 +"</a></li>";
+				$(".create-dd7").append(str);
+			}
+		},
+	})	
+})
+
+</script>
